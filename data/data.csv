@@ -1,0 +1,6 @@
+authors,year,title,journal,doi,repo
+Koch et al.,2020,Effects of aging on encoding of walking direction in the human brain,Neuropsychologia,https://doi.org/10.1016/j.neuropsychologia.2020.107379,https://github.com/koch-means-cook/direction_decoding
+Koch et al.,2020,L-DOPA enhances neural direction signals in younger and older adults,NeuroImage,https://doi.org/10.1016/j.neuroimage.2022.119670,https://github.com/koch-means-cook/damson
+Koch et al.,2022,Influence of surprise on reinforcement learning in younger and older adults,PsyArxiv,https://doi.org/10.31234/osf.io/unx5y,https://github.com/koch-means-cook/pedlr
+Schuck et al.,2022,Spontaneous discovery of novel task solutions in children,PLOS ONE,https://doi.org/10.1371/journal.pone.0266253,https://github.com/nschuck/Schucketal_PLoSONE_2022
+Wittkuhn et al.,2021,Dynamics of fMRI patterns reflect sub-second activation sequences and reveal replay in human visual cortex,Nature Communications,https://doi.org/10.1038/s41467-021-21970-2,https://wittkuhn.mpib.berlin/highspeed/
