@@ -9,3 +9,5 @@
 - `rmarkdown`
 - `markdown`
 - `magrittr`
+- `ggplot2`
+- `viridis`

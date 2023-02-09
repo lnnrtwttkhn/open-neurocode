@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
   echo = FALSE, message = FALSE, warning = FALSE
 )
 library(magrittr)
+library(ggplot2)
+library(viridis)
 ```
 
 ```{r}
@@ -21,14 +23,56 @@ data_path = Sys.glob(here::here("data", "data.csv"))
 data = data.table::rbindlist(lapply(data_path, data.table::fread))
 data_show = data %>%
   .[, title := sprintf("[%s](%s)", title, doi)] %>%
-  .[grepl( "github", repo), repo := sprintf("[GitHub](%s)", repo)] %>%
-  .[grepl( "osf", repo), repo := sprintf("[OSF](%s)", repo)] %>%
-  .[, c("authors", "year", "title", "journal", "repo")] %>%
+  .[grepl( "github", repo), repo_label := "GitHub"] %>%
+  .[grepl( "osf", repo), repo_label := "OSF"] %>%
+  .[, repo := sprintf("[%s](%s)", repo_label, repo)] %>%
+  .[, c("authors", "year", "title", "journal", "repo", "category")] %>%
   data.table::setorder(., -year, authors)
 ```
 
+## Overview
+
 ```{r}
 knitr::kable(data_show, "markdown")
+```
+
+## Repository content
+
+What's inside the repositories?
+Categories are: `code only`, `data only` and `mixed` (code and data mixed in one repository).
+
+```{r, echo=TRUE}
+ggplot(data, aes(x = category, fill = category, color = category)) +
+  geom_bar(position = "dodge", stat = "count") +
+  geom_text(stat = "count", aes(label = ..count..), vjust = -1) +
+  ylab("Number") +
+  xlab("Repository content") +
+  theme(axis.line = element_line(color = "black")) +
+  theme(panel.grid.major = element_blank()) +
+  theme(panel.grid.minor = element_blank()) +
+  theme(panel.background = element_blank()) +
+  theme(legend.position = "none") +
+  scale_fill_viridis(option = "viridis", discrete = TRUE) +
+  scale_color_viridis(option = "viridis", discrete = TRUE)
+```
+
+## Repository platform
+
+Which platforms are used to share code and data?
+
+```{r, echo=TRUE}
+ggplot(data, aes(x = repo_label, fill = repo_label, color = repo_label)) +
+  geom_bar(position = "dodge", stat = "count") +
+  geom_text(stat = "count", aes(label = ..count..), vjust = -1) +
+  ylab("Number") +
+  xlab("Repository platform") +
+  theme(axis.line = element_line(color = "black")) +
+  theme(panel.grid.major = element_blank()) +
+  theme(panel.grid.minor = element_blank()) +
+  theme(panel.background = element_blank()) +
+  theme(legend.position = "none") +
+  scale_fill_viridis(option = "plasma", discrete = TRUE) +
+  scale_color_viridis(option = "plasma", discrete = TRUE)
 ```
 
 
