@@ -21,7 +21,8 @@ data_path = Sys.glob(here::here("data", "data.csv"))
 data = data.table::rbindlist(lapply(data_path, data.table::fread))
 data_show = data %>%
   .[, title := sprintf("[%s](%s)", title, doi)] %>%
-  .[, repo := sprintf("[{{< fa brands github >}}](%s)", repo)] %>%
+  .[grepl( "github", repo), repo := sprintf("[GitHub](%s)", repo)] %>%
+  .[grepl( "osf", repo), repo := sprintf("[OSF](%s)", repo)] %>%
   .[, c("authors", "year", "title", "journal", "repo")] %>%
   data.table::setorder(., -year, authors)
 ```
