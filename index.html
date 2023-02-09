@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -68,9 +131,19 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#repository-content" id="toc-repository-content" class="nav-link" data-scroll-target="#repository-content">Repository content</a></li>
+  <li><a href="#repository-platform" id="toc-repository-platform" class="nav-link" data-scroll-target="#repository-platform">Repository platform</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -93,6 +166,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell">
 
 </div>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
@@ -103,6 +178,7 @@ ul.task-list li input[type="checkbox"] {
 <th style="text-align: left;">title</th>
 <th style="text-align: left;">journal</th>
 <th style="text-align: left;">repo</th>
+<th style="text-align: left;">category</th>
 </tr>
 </thead>
 <tbody>
@@ -112,6 +188,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;"><a href="https://doi.org/10.31234/osf.io/unx5y" target="_blank">Influence of surprise on reinforcement learning in younger and older adults</a></td>
 <td style="text-align: left;">PsyArxiv</td>
 <td style="text-align: left;"><a href="https://github.com/koch-means-cook/pedlr" target="_blank">GitHub</a></td>
+<td style="text-align: left;">code only</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Schuck et al.</td>
@@ -119,6 +196,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;"><a href="https://doi.org/10.1371/journal.pone.0266253" target="_blank">Spontaneous discovery of novel task solutions in children</a></td>
 <td style="text-align: left;">PLOS ONE</td>
 <td style="text-align: left;"><a href="https://github.com/nschuck/Schucketal_PLoSONE_2022" target="_blank">GitHub</a></td>
+<td style="text-align: left;">mixed</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Zika et al.</td>
@@ -126,6 +204,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;"><a href="https://doi.org/10.1101/2022.04.01.483303" target="_blank">Trait anxiety is associated with hidden state inference during aversive reversal learning</a></td>
 <td style="text-align: left;">bioRxiv</td>
 <td style="text-align: left;"><a href="https://github.com/ozika/trait-anxiety-and-state-inference-zika2022" target="_blank">GitHub</a></td>
+<td style="text-align: left;">mixed</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Hall-McMaster et al.</td>
@@ -133,13 +212,15 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;"><a href="https://doi.org/10.1016/j.isci.2021.103005" target="_blank">Control over patch encounters changes foraging behavior</a></td>
 <td style="text-align: left;">iScience</td>
 <td style="text-align: left;"><a href="https://osf.io/c4trj/" target="_blank">OSF</a></td>
+<td style="text-align: left;">mixed</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Wittkuhn et al.</td>
 <td style="text-align: right;">2021</td>
 <td style="text-align: left;"><a href="https://doi.org/10.1038/s41467-021-21970-2" target="_blank">Dynamics of fMRI patterns reflect sub-second activation sequences and reveal replay in human visual cortex</a></td>
 <td style="text-align: left;">Nature Communications</td>
-<td style="text-align: left;">https://wittkuhn.mpib.berlin/highspeed/</td>
+<td style="text-align: left;"><a href="https://github.com/lnnrtwttkhn/highspeed-analysis" target="_blank">GitHub</a></td>
+<td style="text-align: left;">mixed</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Wittkuhn et al.</td>
@@ -147,6 +228,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;"><a href="https://doi.org/10.1016/j.neubiorev.2021.08.002" target="_blank">Replay in minds and machines</a></td>
 <td style="text-align: left;">Neuroscience &amp; Biobehavioral Reviews</td>
 <td style="text-align: left;"><a href="https://github.com/lnnrtwttkhn/replaysim-wittkuhn-etal2021" target="_blank">GitHub</a></td>
+<td style="text-align: left;">code only</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Koch et al.</td>
@@ -154,6 +236,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;"><a href="https://doi.org/10.1016/j.neuropsychologia.2020.107379" target="_blank">Effects of aging on encoding of walking direction in the human brain</a></td>
 <td style="text-align: left;">Neuropsychologia</td>
 <td style="text-align: left;"><a href="https://github.com/koch-means-cook/direction_decoding" target="_blank">GitHub</a></td>
+<td style="text-align: left;">code only</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Koch et al.</td>
@@ -161,13 +244,63 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;"><a href="https://doi.org/10.1016/j.neuroimage.2022.119670" target="_blank">L-DOPA enhances neural direction signals in younger and older adults</a></td>
 <td style="text-align: left;">NeuroImage</td>
 <td style="text-align: left;"><a href="https://github.com/koch-means-cook/damson" target="_blank">GitHub</a></td>
+<td style="text-align: left;">code only</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
+</section>
+<section id="repository-content" class="level2">
+<h2 class="anchored" data-anchor-id="repository-content">Repository content</h2>
+<p>What’s inside the repositories? Categories are: <code>code only</code>, <code>data only</code> and <code>mixed</code> (code and data mixed in one repository).</p>
+<div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> category, <span class="at">fill =</span> category, <span class="at">color =</span> category)) <span class="sc">+</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">stat =</span> <span class="st">"count"</span>) <span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">stat =</span> <span class="st">"count"</span>, <span class="fu">aes</span>(<span class="at">label =</span> ..count..), <span class="at">vjust =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number"</span>) <span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Repository content"</span>) <span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>)) <span class="sc">+</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">option =</span> <span class="st">"viridis"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis</span>(<span class="at">option =</span> <span class="st">"viridis"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="repository-platform" class="level2">
+<h2 class="anchored" data-anchor-id="repository-platform">Repository platform</h2>
+<p>Which platforms are used to share code and data?</p>
+<div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> repo_label, <span class="at">fill =</span> repo_label, <span class="at">color =</span> repo_label)) <span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">stat =</span> <span class="st">"count"</span>) <span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">stat =</span> <span class="st">"count"</span>, <span class="fu">aes</span>(<span class="at">label =</span> ..count..), <span class="at">vjust =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number"</span>) <span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Repository platform"</span>) <span class="sc">+</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>)) <span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -301,6 +434,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/github\.com\/lnnrtwttkhn\/open-neurocode/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->
