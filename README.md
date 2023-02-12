@@ -1,5 +1,7 @@
 # Open NeuroCode
 
+[![Quarto Publish](https://github.com/lnnrtwttkhn/open-neurocode/actions/workflows/publish.yml/badge.svg)](https://github.com/lnnrtwttkhn/open-neurocode/actions/workflows/publish.yml)
+
 ## Requirements
 
 ### Packages
