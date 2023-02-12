@@ -11,3 +11,4 @@
 - `magrittr`
 - `ggplot2`
 - `viridis`
+- `DT`

@@ -1,4 +1,4 @@
-authors,year,title,journal,doi,repo,category,paper_oa
+paper_authors,paper_year,paper_title,paper_journal,paper_doi,repo,category,paper_oa
 Koch et al.,2020,Effects of aging on encoding of walking direction in the human brain,Neuropsychologia,https://doi.org/10.1016/j.neuropsychologia.2020.107379,https://github.com/koch-means-cook/direction_decoding,code only,no
 Koch et al.,2022,L-DOPA enhances neural direction signals in younger and older adults,NeuroImage,https://doi.org/10.1016/j.neuroimage.2022.119670,https://github.com/koch-means-cook/damson,code only,yes
 Koch et al.,2022,Influence of surprise on reinforcement learning in younger and older adults,PsyArxiv,https://doi.org/10.31234/osf.io/unx5y,https://github.com/koch-means-cook/pedlr,code only,yes

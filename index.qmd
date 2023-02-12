@@ -22,24 +22,33 @@ knitr::opts_chunk$set(
 library(magrittr)
 library(ggplot2)
 library(viridis)
+library(DT)
 ```
 
 ```{r}
 data_path = Sys.glob(here::here("data", "data.csv"))
 data = data.table::rbindlist(lapply(data_path, data.table::fread))
 data_show = data %>%
-  .[, title := sprintf("[%s](%s)", title, doi)] %>%
+  .[, paper_title := sprintf("<a href='%s' target='_blank'>%s</a>", paper_doi, paper_title)] %>%
   .[grepl( "github", repo), repo_label := "GitHub"] %>%
   .[grepl( "osf", repo), repo_label := "OSF"] %>%
-  .[, repo := sprintf("[%s](%s)", repo_label, repo)] %>%
-  .[, c("authors", "year", "title", "journal", "repo", "category")] %>%
-  data.table::setorder(., -year, authors)
+  .[, repo := sprintf("<a href='%s' target='_blank'>%s</a>", repo, repo_label)] %>%
+  .[, c("paper_authors", "paper_year", "paper_title", "paper_journal", "repo", "category")] %>%
+  data.table::setorder(., -paper_year, paper_authors)
 ```
 
 ## Overview
 
 ```{r}
-knitr::kable(data_show, "markdown")
+DT::datatable(
+  data_show,
+  class = "cell-border stripe", rownames = FALSE, escape = FALSE,
+  options = list(
+    scrollX = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 15, 20)
+    ),
+  ) 
 ```
 
 ## Repository content
