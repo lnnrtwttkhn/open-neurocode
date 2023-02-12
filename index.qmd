@@ -14,6 +14,8 @@ format:
 This website lists code and data repositories for publications of the [Max Planck Reseach Group NeuroCode](https://www.mpib-berlin.mpg.de/research/research-groups/mprg-neurocode) at the [Max Planck Institute for Human Development, Berlin](https://www.mpib-berlin.mpg.de/en) (sorted by year and author).
 The source repository can be found [on GitHub](https://github.com/lnnrtwttkhn/open-neurocode).
 
+The papers listed below have a least one author who is affiliated with the NeuroCode group.
+In most cases, this is at least [the PI Nico Schuck](https://www.mpib-berlin.mpg.de/staff/nicolas-schuck).
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
@@ -60,7 +62,7 @@ DT::datatable(
 ## Repository content
 
 What's inside the repositories?
-Categories are: `code only`, `data only` and `mixed` (code and data mixed in one repository).
+Categories are: `code only`, `data only` and `mixed` (code and data mixed in one repository) or `n/a` (not applicable, i.e., no repository available).
 
 ```{r, echo=TRUE}
 ggplot(data, aes(x = category, fill = category, color = category)) +
@@ -114,4 +116,3 @@ ggplot(data, aes(x = paper_oa, fill = paper_oa, color = paper_oa)) +
   scale_fill_viridis(option = "inferno", discrete = TRUE) +
   scale_color_viridis(option = "inferno", discrete = TRUE)
 ```
-
