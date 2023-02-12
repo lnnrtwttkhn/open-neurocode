@@ -33,7 +33,8 @@ data_show = data %>%
   .[, paper_title := sprintf("<a href='%s' target='_blank'>%s</a>", paper_doi, paper_title)] %>%
   .[grepl( "github", repo), repo_label := "GitHub"] %>%
   .[grepl( "osf", repo), repo_label := "OSF"] %>%
-  .[, repo := sprintf("<a href='%s' target='_blank'>%s</a>", repo, repo_label)] %>%
+  .[grepl( "n/a", repo), repo_label := "n/a"] %>%
+  .[repo != "n/a", repo := sprintf("<a href='%s' target='_blank'>%s</a>", repo, repo_label)] %>%
   .[, c("paper_authors", "paper_year", "paper_title", "paper_journal", "repo", "category")] %>%
   setnames(., "paper_authors", "authors") %>%
   setnames(., "paper_year", "year") %>%
