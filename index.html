@@ -121,6 +121,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
+<script src="site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="site_libs/datatables-binding-0.27/datatables.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="site_libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
 
 </head>
 
@@ -139,6 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#repository-content" id="toc-repository-content" class="nav-link" data-scroll-target="#repository-content">Repository content</a></li>
   <li><a href="#repository-platform" id="toc-repository-platform" class="nav-link" data-scroll-target="#repository-platform">Repository platform</a></li>
+  <li><a href="#open-access" id="toc-open-access" class="nav-link" data-scroll-target="#open-access">Open Access</a></li>
   </ul>
 </nav>
     </div>
@@ -170,92 +181,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
-<thead>
-<tr class="header">
-<th style="text-align: left;">authors</th>
-<th style="text-align: right;">year</th>
-<th style="text-align: left;">title</th>
-<th style="text-align: left;">journal</th>
-<th style="text-align: left;">repo</th>
-<th style="text-align: left;">category</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Koch et al.</td>
-<td style="text-align: right;">2022</td>
-<td style="text-align: left;"><a href="https://doi.org/10.1016/j.neuroimage.2022.119670" target="_blank">L-DOPA enhances neural direction signals in younger and older adults</a></td>
-<td style="text-align: left;">NeuroImage</td>
-<td style="text-align: left;"><a href="https://github.com/koch-means-cook/damson" target="_blank">GitHub</a></td>
-<td style="text-align: left;">code only</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Koch et al.</td>
-<td style="text-align: right;">2022</td>
-<td style="text-align: left;"><a href="https://doi.org/10.31234/osf.io/unx5y" target="_blank">Influence of surprise on reinforcement learning in younger and older adults</a></td>
-<td style="text-align: left;">PsyArxiv</td>
-<td style="text-align: left;"><a href="https://github.com/koch-means-cook/pedlr" target="_blank">GitHub</a></td>
-<td style="text-align: left;">code only</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Petzka et al.</td>
-<td style="text-align: right;">2022</td>
-<td style="text-align: left;"><a href="https://doi.org/10.1016/j.cub.2022.04.045" target="_blank">Sleep spindles track cortical learning patterns for memory consolidation</a></td>
-<td style="text-align: left;">Current Biology</td>
-<td style="text-align: left;"><a href="https://osf.io/a3phq/" target="_blank">OSF</a></td>
-<td style="text-align: left;">mixed</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Schuck et al.</td>
-<td style="text-align: right;">2022</td>
-<td style="text-align: left;"><a href="https://doi.org/10.1371/journal.pone.0266253" target="_blank">Spontaneous discovery of novel task solutions in children</a></td>
-<td style="text-align: left;">PLOS ONE</td>
-<td style="text-align: left;"><a href="https://github.com/nschuck/Schucketal_PLoSONE_2022" target="_blank">GitHub</a></td>
-<td style="text-align: left;">mixed</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Zika et al.</td>
-<td style="text-align: right;">2022</td>
-<td style="text-align: left;"><a href="https://doi.org/10.1101/2022.04.01.483303" target="_blank">Trait anxiety is associated with hidden state inference during aversive reversal learning</a></td>
-<td style="text-align: left;">bioRxiv</td>
-<td style="text-align: left;"><a href="https://github.com/ozika/trait-anxiety-and-state-inference-zika2022" target="_blank">GitHub</a></td>
-<td style="text-align: left;">mixed</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Hall-McMaster et al.</td>
-<td style="text-align: right;">2021</td>
-<td style="text-align: left;"><a href="https://doi.org/10.1016/j.isci.2021.103005" target="_blank">Control over patch encounters changes foraging behavior</a></td>
-<td style="text-align: left;">iScience</td>
-<td style="text-align: left;"><a href="https://osf.io/c4trj/" target="_blank">OSF</a></td>
-<td style="text-align: left;">mixed</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Wittkuhn et al.</td>
-<td style="text-align: right;">2021</td>
-<td style="text-align: left;"><a href="https://doi.org/10.1038/s41467-021-21970-2" target="_blank">Dynamics of fMRI patterns reflect sub-second activation sequences and reveal replay in human visual cortex</a></td>
-<td style="text-align: left;">Nature Communications</td>
-<td style="text-align: left;"><a href="https://github.com/lnnrtwttkhn/highspeed-analysis" target="_blank">GitHub</a></td>
-<td style="text-align: left;">mixed</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Wittkuhn et al.</td>
-<td style="text-align: right;">2021</td>
-<td style="text-align: left;"><a href="https://doi.org/10.1016/j.neubiorev.2021.08.002" target="_blank">Replay in minds and machines</a></td>
-<td style="text-align: left;">Neuroscience &amp; Biobehavioral Reviews</td>
-<td style="text-align: left;"><a href="https://github.com/lnnrtwttkhn/replaysim-wittkuhn-etal2021" target="_blank">GitHub</a></td>
-<td style="text-align: left;">code only</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Koch et al.</td>
-<td style="text-align: right;">2020</td>
-<td style="text-align: left;"><a href="https://doi.org/10.1016/j.neuropsychologia.2020.107379" target="_blank">Effects of aging on encoding of walking direction in the human brain</a></td>
-<td style="text-align: left;">Neuropsychologia</td>
-<td style="text-align: left;"><a href="https://github.com/koch-means-cook/direction_decoding" target="_blank">GitHub</a></td>
-<td style="text-align: left;">code only</td>
-</tr>
-</tbody>
-</table>
+
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-867440187c32f7683643" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-867440187c32f7683643">{"x":{"filter":"none","vertical":false,"data":[["Koch et al.","Koch et al.","Petzka et al.","Schuck et al.","Zika et al.","Hall-McMaster et al.","Wittkuhn et al.","Wittkuhn et al.","Koch et al."],[2022,2022,2022,2022,2022,2021,2021,2021,2020],["<a href='https://doi.org/10.1016/j.neuroimage.2022.119670' target='_blank'>L-DOPA enhances neural direction signals in younger and older adults<\/a>","<a href='https://doi.org/10.31234/osf.io/unx5y' target='_blank'>Influence of surprise on reinforcement learning in younger and older adults<\/a>","<a href='https://doi.org/10.1016/j.cub.2022.04.045' target='_blank'>Sleep spindles track cortical learning patterns for memory consolidation<\/a>","<a href='https://doi.org/10.1371/journal.pone.0266253' target='_blank'>Spontaneous discovery of novel task solutions in children<\/a>","<a href='https://doi.org/10.1101/2022.04.01.483303' target='_blank'>Trait anxiety is associated with hidden state inference during aversive reversal learning<\/a>","<a href='https://doi.org/10.1016/j.isci.2021.103005' target='_blank'>Control over patch encounters changes foraging behavior<\/a>","<a href='https://doi.org/10.1038/s41467-021-21970-2' target='_blank'>Dynamics of fMRI patterns reflect sub-second activation sequences and reveal replay in human visual cortex<\/a>","<a href='https://doi.org/10.1016/j.neubiorev.2021.08.002' target='_blank'>Replay in minds and machines<\/a>","<a href='https://doi.org/10.1016/j.neuropsychologia.2020.107379' target='_blank'>Effects of aging on encoding of walking direction in the human brain<\/a>"],["NeuroImage","PsyArxiv","Current Biology","PLOS ONE","bioRxiv","iScience","Nature Communications","Neuroscience & Biobehavioral Reviews","Neuropsychologia"],["<a href='https://github.com/koch-means-cook/damson' target='_blank'>GitHub<\/a>","<a href='https://github.com/koch-means-cook/pedlr' target='_blank'>GitHub<\/a>","<a href='https://osf.io/a3phq/' target='_blank'>OSF<\/a>","<a href='https://github.com/nschuck/Schucketal_PLoSONE_2022' target='_blank'>GitHub<\/a>","<a href='https://github.com/ozika/trait-anxiety-and-state-inference-zika2022' target='_blank'>GitHub<\/a>","<a href='https://osf.io/c4trj/' target='_blank'>OSF<\/a>","<a href='https://github.com/lnnrtwttkhn/highspeed-analysis' target='_blank'>GitHub<\/a>","<a href='https://github.com/lnnrtwttkhn/replaysim-wittkuhn-etal2021' target='_blank'>GitHub<\/a>","<a href='https://github.com/koch-means-cook/direction_decoding' target='_blank'>GitHub<\/a>"],["code only","code only","mixed","mixed","mixed","mixed","mixed","code only","code only"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>authors<\/th>\n      <th>year<\/th>\n      <th>title<\/th>\n      <th>jorunal<\/th>\n      <th>repo<\/th>\n      <th>category<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"pageLength":10,"lengthMenu":[5,10,15,20],"columnDefs":[{"className":"dt-right","targets":1}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -304,6 +232,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="open-access" class="level2">
+<h2 class="anchored" data-anchor-id="open-access">Open Access</h2>
+<p>How many papers are open access?</p>
+<div class="cell">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> paper_oa, <span class="at">fill =</span> paper_oa, <span class="at">color =</span> paper_oa)) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">stat =</span> <span class="st">"count"</span>) <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">stat =</span> <span class="st">"count"</span>, <span class="fu">aes</span>(<span class="at">label =</span> ..count..), <span class="at">vjust =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Number"</span>) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Is the paper open access?"</span>) <span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>)) <span class="sc">+</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">option =</span> <span class="st">"inferno"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis</span>(<span class="at">option =</span> <span class="st">"inferno"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
