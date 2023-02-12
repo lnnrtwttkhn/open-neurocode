@@ -50,7 +50,7 @@ DT::datatable(
   class = "cell-border stripe", rownames = FALSE, escape = FALSE,
   options = list(
     scrollX = TRUE,
-    pageLength = 5,
+    pageLength = 10,
     lengthMenu = c(5, 10, 15, 20)
     ),
   ) 
