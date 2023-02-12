@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
   echo = FALSE, message = FALSE, warning = FALSE
 )
 library(magrittr)
+library(data.table)
 library(ggplot2)
 library(viridis)
 library(DT)
@@ -34,7 +35,11 @@ data_show = data %>%
   .[grepl( "osf", repo), repo_label := "OSF"] %>%
   .[, repo := sprintf("<a href='%s' target='_blank'>%s</a>", repo, repo_label)] %>%
   .[, c("paper_authors", "paper_year", "paper_title", "paper_journal", "repo", "category")] %>%
-  data.table::setorder(., -paper_year, paper_authors)
+  setnames(., "paper_authors", "authors") %>%
+  setnames(., "paper_year", "year") %>%
+  setnames(., "paper_title", "title") %>%
+  setnames(., "paper_journal", "jorunal") %>%
+  data.table::setorder(., -year, authors)
 ```
 
 ## Overview
