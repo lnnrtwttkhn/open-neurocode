@@ -41,7 +41,7 @@ data_show = data %>%
   setnames(., "paper_authors", "authors") %>%
   setnames(., "paper_year", "year") %>%
   setnames(., "paper_title", "title") %>%
-  setnames(., "paper_journal", "jorunal") %>%
+  setnames(., "paper_journal", "journal") %>%
   data.table::setorder(., -year, authors)
 ```
 
