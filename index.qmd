@@ -11,11 +11,8 @@ format:
     link-external-newwindow: true
 ---
 
-This website lists code and data repositories for publications of the [Max Planck Reseach Group NeuroCode](https://www.mpib-berlin.mpg.de/research/research-groups/mprg-neurocode) at the [Max Planck Institute for Human Development, Berlin](https://www.mpib-berlin.mpg.de/en) (sorted by year and author).
+This website lists code and data repositories for publications of the [Max Planck Reseach Group NeuroCode](https://www.mpib-berlin.mpg.de/research/research-groups/mprg-neurocode) at the [Max Planck Institute for Human Development, Berlin](https://www.mpib-berlin.mpg.de/en).
 The source repository can be found [on GitHub](https://github.com/lnnrtwttkhn/open-neurocode).
-
-The papers listed below have a least one author who is affiliated with the NeuroCode group.
-In most cases, this is at least [the PI Nico Schuck](https://www.mpib-berlin.mpg.de/staff/nicolas-schuck).
 
 ::: {.callout-warning}
 ## Please note that this website is still under construction! 🏗 🚧 👷‍♂️
@@ -55,7 +52,9 @@ data_show = data %>%
 
 ## Overview
 
-The table below gives an overview over all publications.
+The table below gives an overview over all publications (sorted by year and author).
+The listed papers have a least one author who is affiliated with the NeuroCode group.
+In most cases, this is at least [the PI Nico Schuck](https://www.mpib-berlin.mpg.de/staff/nicolas-schuck).
 Please note that this list might be incomplete.
 
 ```{r}
