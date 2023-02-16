@@ -62,10 +62,15 @@ DT::datatable(
 ## Repository content
 
 What's inside the repositories?
-Categories are: `code only`, `data only` and `mixed` (code and data mixed in one repository) or `n/a` (not applicable, i.e., no repository available).
+
+Categories are: `code only`, `data only` and `code & data` (code and data are shared in one repository) or `n/a` (not applicable, i.e., no repository available).
+
+The plot only includes papers that are (1) empirical (i.e., where empirical data has been collected and / or analyzed) and (2) published in a peer-reviewed journal (preprints are not included).
 
 ```{r, echo=TRUE}
-ggplot(data, aes(x = category, fill = category, color = category)) +
+dt_empirical_published = data %>%
+  .[paper_type == "empirical" & paper_status == "journal article", ]
+ggplot(dt_empirical_published, aes(x = category, fill = category, color = category)) +
   geom_bar(position = "dodge", stat = "count") +
   geom_text(stat = "count", aes(label = ..count..), vjust = -1) +
   ylab("Number") +
@@ -83,8 +88,10 @@ ggplot(data, aes(x = category, fill = category, color = category)) +
 
 Which platforms are used to share code and data?
 
+As above, the plot only includes papers that are (1) empirical (i.e., where empirical data has been collected and / or analyzed) and (2) published in a peer-reviewed journal (i.e., preprints are not included).
+
 ```{r, echo=TRUE}
-ggplot(data, aes(x = repo_label, fill = repo_label, color = repo_label)) +
+ggplot(dt_empirical_published, aes(x = repo_label, fill = repo_label, color = repo_label)) +
   geom_bar(position = "dodge", stat = "count") +
   geom_text(stat = "count", aes(label = ..count..), vjust = -1) +
   ylab("Number") +
@@ -101,6 +108,8 @@ ggplot(data, aes(x = repo_label, fill = repo_label, color = repo_label)) +
 ## Open Access
 
 How many papers are open access?
+
+The plot involves all papers (including review articles and preprints).
 
 ```{r, echo=TRUE}
 ggplot(data, aes(x = paper_oa, fill = paper_oa, color = paper_oa)) +
