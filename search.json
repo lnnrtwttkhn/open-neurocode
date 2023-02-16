@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "open-neurocode",
     "section": "",
-    "text": "This website lists code and data repositories for publications of the Max Planck Reseach Group NeuroCode at the Max Planck Institute for Human Development, Berlin (sorted by year and author). The source repository can be found on GitHub.\nThe papers listed below have a least one author who is affiliated with the NeuroCode group. In most cases, this is at least the PI Nico Schuck."
+    "text": "This website lists code and data repositories for publications of the Max Planck Reseach Group NeuroCode at the Max Planck Institute for Human Development, Berlin. The source repository can be found on GitHub."
   },
   {
     "objectID": "index.html#overview",
     "href": "index.html#overview",
     "title": "open-neurocode",
     "section": "Overview",
-    "text": "Overview\nThe table below gives an overview over all publications. Please note that this list might be incomplete."
+    "text": "Overview\nThe table below gives an overview over all publications (sorted by year and author). The listed papers have a least one author who is affiliated with the NeuroCode group. In most cases, this is at least the PI Nico Schuck. Please note that this list might be incomplete."
   },
   {
     "objectID": "index.html#repository-content",
