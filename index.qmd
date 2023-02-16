@@ -17,6 +17,14 @@ The source repository can be found [on GitHub](https://github.com/lnnrtwttkhn/op
 The papers listed below have a least one author who is affiliated with the NeuroCode group.
 In most cases, this is at least [the PI Nico Schuck](https://www.mpib-berlin.mpg.de/staff/nicolas-schuck).
 
+::: {.callout-warning}
+## Please note that this website is still under construction! 🏗 🚧 👷‍♂️
+The data and code might be incomplete or erroneous.
+If you notice any errors or have suggestions for improvements, please either [open an issue](https://github.com/lnnrtwttkhn/open-neurocode/issues/new) or contact [Lennart Wittkuhn](mailto:wittkuhn@mpib-berlin.mpg.de).
+You can also review the data and all of the source code in [this GitHub repository](https://github.com/lnnrtwttkhn/open-neurocode).
+Thank you!
+:::
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
   echo = FALSE, message = FALSE, warning = FALSE
@@ -46,6 +54,9 @@ data_show = data %>%
 ```
 
 ## Overview
+
+The table below gives an overview over all publications.
+Please note that this list might be incomplete.
 
 ```{r}
 DT::datatable(
