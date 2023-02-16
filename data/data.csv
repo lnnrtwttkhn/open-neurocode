@@ -2,12 +2,12 @@ paper_authors,paper_year,paper_title,paper_journal,paper_doi,repo,category,paper
 Koch et al.,2020,Effects of aging on encoding of walking direction in the human brain,Neuropsychologia,https://doi.org/10.1016/j.neuropsychologia.2020.107379,https://github.com/koch-means-cook/direction_decoding,code only,no
 Koch et al.,2022,L-DOPA enhances neural direction signals in younger and older adults,NeuroImage,https://doi.org/10.1016/j.neuroimage.2022.119670,https://github.com/koch-means-cook/damson,code only,yes
 Koch et al.,2022,Influence of surprise on reinforcement learning in younger and older adults,PsyArxiv,https://doi.org/10.31234/osf.io/unx5y,https://github.com/koch-means-cook/pedlr,code only,yes
-Schuck et al.,2022,Spontaneous discovery of novel task solutions in children,PLOS ONE,https://doi.org/10.1371/journal.pone.0266253,https://github.com/nschuck/Schucketal_PLoSONE_2022,mixed,yes
-Wittkuhn et al.,2021,Dynamics of fMRI patterns reflect sub-second activation sequences and reveal replay in human visual cortex,Nature Communications,https://doi.org/10.1038/s41467-021-21970-2,https://github.com/lnnrtwttkhn/highspeed-analysis,mixed,yes
-Hall-McMaster et al.,2021,Control over patch encounters changes foraging behavior,iScience,https://doi.org/10.1016/j.isci.2021.103005,https://osf.io/c4trj/,mixed,yes
+Schuck et al.,2022,Spontaneous discovery of novel task solutions in children,PLOS ONE,https://doi.org/10.1371/journal.pone.0266253,https://github.com/nschuck/Schucketal_PLoSONE_2022,code & data,yes
+Wittkuhn et al.,2021,Dynamics of fMRI patterns reflect sub-second activation sequences and reveal replay in human visual cortex,Nature Communications,https://doi.org/10.1038/s41467-021-21970-2,https://github.com/lnnrtwttkhn/highspeed-analysis,code & data,yes
+Hall-McMaster et al.,2021,Control over patch encounters changes foraging behavior,iScience,https://doi.org/10.1016/j.isci.2021.103005,https://osf.io/c4trj/,code & data,yes
 Wittkuhn et al.,2021,Replay in minds and machines,Neuroscience & Biobehavioral Reviews,https://doi.org/10.1016/j.neubiorev.2021.08.002,https://github.com/lnnrtwttkhn/replaysim-wittkuhn-etal2021,code only,no
-Zika et al.,2022,Trait anxiety is associated with hidden state inference during aversive reversal learning,bioRxiv,https://doi.org/10.1101/2022.04.01.483303,https://github.com/ozika/trait-anxiety-and-state-inference-zika2022,mixed,yes
-Petzka et al.,2022,Sleep spindles track cortical learning patterns for memory consolidation,Current Biology,https://doi.org/10.1016/j.cub.2022.04.045,https://osf.io/a3phq/,mixed,yes
+Zika et al.,2022,Trait anxiety is associated with hidden state inference during aversive reversal learning,bioRxiv,https://doi.org/10.1101/2022.04.01.483303,https://github.com/ozika/trait-anxiety-and-state-inference-zika2022,code & data,yes
+Petzka et al.,2022,Sleep spindles track cortical learning patterns for memory consolidation,Current Biology,https://doi.org/10.1016/j.cub.2022.04.045,https://osf.io/a3phq/,code & data,yes
 Moneta et al.,2021,Representations of context and context-dependent values in vmPFC compete for guiding behavior,bioRxiv,"https://doi.org/10.1101/2021.03.17.435844 ",n/a,n/a,yes
 Garvert et al.,2021,Hippocampal spatio-temporal cognitive maps adaptively guide reward generalization,bioRxiv,"https://doi.org/10.1101/2021.10.22.465012 ",n/a,n/a,yes
 Muhle-Karbe et al.,2023,Goal-seeking compresses neural codes for space in the human hippocampus and orbitofrontal cortex,bioRxiv,"https://doi.org/10.1101/2023.01.12.523762 ",n/a,n/a,yes
