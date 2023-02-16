@@ -11,27 +11,27 @@
     "href": "index.html#overview",
     "title": "open-neurocode",
     "section": "Overview",
-    "text": "Overview"
+    "text": "Overview\nThe table below gives an overview over all publications. Please note that this list might be incomplete."
   },
   {
     "objectID": "index.html#repository-content",
     "href": "index.html#repository-content",
     "title": "open-neurocode",
     "section": "Repository content",
-    "text": "Repository content\nWhat’s inside the repositories? Categories are: code only, data only and mixed (code and data mixed in one repository) or n/a (not applicable, i.e., no repository available).\n\n\nShow the code\nggplot(data, aes(x = category, fill = category, color = category)) +\n  geom_bar(position = \"dodge\", stat = \"count\") +\n  geom_text(stat = \"count\", aes(label = ..count..), vjust = -1) +\n  ylab(\"Number\") +\n  xlab(\"Repository content\") +\n  theme(axis.line = element_line(color = \"black\")) +\n  theme(panel.grid.major = element_blank()) +\n  theme(panel.grid.minor = element_blank()) +\n  theme(panel.background = element_blank()) +\n  theme(legend.position = \"none\") +\n  scale_fill_viridis(option = \"viridis\", discrete = TRUE) +\n  scale_color_viridis(option = \"viridis\", discrete = TRUE)"
+    "text": "Repository content\nWhat’s inside the repositories?\nCategories are: code only, data only and code & data (code and data are shared in one repository) or n/a (not applicable, i.e., no repository available).\nThe plot only includes papers that are (1) empirical (i.e., where empirical data has been collected and / or analyzed) and (2) published in a peer-reviewed journal (preprints are not included).\n\n\nShow the code\ndt_empirical_published = data %>%\n  .[paper_type == \"empirical\" & paper_status == \"journal article\", ]\nggplot(dt_empirical_published, aes(x = category, fill = category, color = category)) +\n  geom_bar(position = \"dodge\", stat = \"count\") +\n  geom_text(stat = \"count\", aes(label = ..count..), vjust = -1) +\n  ylab(\"Number\") +\n  xlab(\"Repository content\") +\n  theme(axis.line = element_line(color = \"black\")) +\n  theme(panel.grid.major = element_blank()) +\n  theme(panel.grid.minor = element_blank()) +\n  theme(panel.background = element_blank()) +\n  theme(legend.position = \"none\") +\n  scale_fill_viridis(option = \"viridis\", discrete = TRUE) +\n  scale_color_viridis(option = \"viridis\", discrete = TRUE)"
   },
   {
     "objectID": "index.html#repository-platform",
     "href": "index.html#repository-platform",
     "title": "open-neurocode",
     "section": "Repository platform",
-    "text": "Repository platform\nWhich platforms are used to share code and data?\n\n\nShow the code\nggplot(data, aes(x = repo_label, fill = repo_label, color = repo_label)) +\n  geom_bar(position = \"dodge\", stat = \"count\") +\n  geom_text(stat = \"count\", aes(label = ..count..), vjust = -1) +\n  ylab(\"Number\") +\n  xlab(\"Repository platform\") +\n  theme(axis.line = element_line(color = \"black\")) +\n  theme(panel.grid.major = element_blank()) +\n  theme(panel.grid.minor = element_blank()) +\n  theme(panel.background = element_blank()) +\n  theme(legend.position = \"none\") +\n  scale_fill_viridis(option = \"plasma\", discrete = TRUE) +\n  scale_color_viridis(option = \"plasma\", discrete = TRUE)"
+    "text": "Repository platform\nWhich platforms are used to share code and data?\nAs above, the plot only includes papers that are (1) empirical (i.e., where empirical data has been collected and / or analyzed) and (2) published in a peer-reviewed journal (i.e., preprints are not included).\n\n\nShow the code\nggplot(dt_empirical_published, aes(x = repo_label, fill = repo_label, color = repo_label)) +\n  geom_bar(position = \"dodge\", stat = \"count\") +\n  geom_text(stat = \"count\", aes(label = ..count..), vjust = -1) +\n  ylab(\"Number\") +\n  xlab(\"Repository platform\") +\n  theme(axis.line = element_line(color = \"black\")) +\n  theme(panel.grid.major = element_blank()) +\n  theme(panel.grid.minor = element_blank()) +\n  theme(panel.background = element_blank()) +\n  theme(legend.position = \"none\") +\n  scale_fill_viridis(option = \"plasma\", discrete = TRUE) +\n  scale_color_viridis(option = \"plasma\", discrete = TRUE)"
   },
   {
     "objectID": "index.html#open-access",
     "href": "index.html#open-access",
     "title": "open-neurocode",
     "section": "Open Access",
-    "text": "Open Access\nHow many papers are open access?\n\n\nShow the code\nggplot(data, aes(x = paper_oa, fill = paper_oa, color = paper_oa)) +\n  geom_bar(position = \"dodge\", stat = \"count\") +\n  geom_text(stat = \"count\", aes(label = ..count..), vjust = -1) +\n  ylab(\"Number\") +\n  xlab(\"Is the paper open access?\") +\n  theme(axis.line = element_line(color = \"black\")) +\n  theme(panel.grid.major = element_blank()) +\n  theme(panel.grid.minor = element_blank()) +\n  theme(panel.background = element_blank()) +\n  theme(legend.position = \"none\") +\n  scale_fill_viridis(option = \"inferno\", discrete = TRUE) +\n  scale_color_viridis(option = \"inferno\", discrete = TRUE)"
+    "text": "Open Access\nHow many papers are open access?\nThe plot involves all papers (including review articles and preprints).\n\n\nShow the code\nggplot(data, aes(x = paper_oa, fill = paper_oa, color = paper_oa)) +\n  geom_bar(position = \"dodge\", stat = \"count\") +\n  geom_text(stat = \"count\", aes(label = ..count..), vjust = -1) +\n  ylab(\"Number\") +\n  xlab(\"Is the paper open access?\") +\n  theme(axis.line = element_line(color = \"black\")) +\n  theme(panel.grid.major = element_blank()) +\n  theme(panel.grid.minor = element_blank()) +\n  theme(panel.background = element_blank()) +\n  theme(legend.position = \"none\") +\n  scale_fill_viridis(option = \"inferno\", discrete = TRUE) +\n  scale_color_viridis(option = \"inferno\", discrete = TRUE)"
   }
 ]
