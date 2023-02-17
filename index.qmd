@@ -115,6 +115,27 @@ ggplot(dt_empirical_published, aes(x = repo_label, fill = repo_label, color = re
   scale_color_viridis(option = "plasma", discrete = TRUE)
 ```
 
+## Repository license
+
+Which licenses are used when sharing code and data?
+
+As above, the plot only includes papers that are (1) empirical (i.e., where empirical data has been collected and / or analyzed) and (2) published in a peer-reviewed journal (i.e., preprints are not included).
+
+```{r, echo=TRUE}
+ggplot(dt_empirical_published, aes(x = repo_license, fill = repo_license, color = repo_license)) +
+  geom_bar(position = "dodge", stat = "count") +
+  geom_text(stat = "count", aes(label = ..count..), vjust = -1) +
+  ylab("Number") +
+  xlab("License") +
+  theme(axis.line = element_line(color = "black")) +
+  theme(panel.grid.major = element_blank()) +
+  theme(panel.grid.minor = element_blank()) +
+  theme(panel.background = element_blank()) +
+  theme(legend.position = "none") +
+  scale_fill_viridis(option = "plasma", discrete = TRUE) +
+  scale_color_viridis(option = "plasma", discrete = TRUE)
+```
+
 ## Open Access
 
 How many papers are open access?
