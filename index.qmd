@@ -3,7 +3,7 @@ title: "open-neurocode"
 format: 
   html:
     toc: true
-    toc-depth: 2
+    toc-depth: 3
     toc-title: Contents
     page-layout: full
     code-fold: true
@@ -69,20 +69,21 @@ DT::datatable(
   ) 
 ```
 
-## Repository content
+## Prevalence
 
-What's inside the repositories?
+How often are code and data shared?
 
-Categories are: `code only`, `data only` and `code & data` (code and data are shared in one repository) or `n/a` (not applicable, i.e., no repository available).
+The data are separated by `paper_status` and `paper_type`.
 
-The plot only includes papers that are (1) empirical (i.e., where empirical data has been collected and / or analyzed) and (2) published in a peer-reviewed journal (preprints are not included).
+`paper_status` refers to the publication status of the paper, i.e., whether the paper is a peer-reviewed journal article or preprint.
+
+`paper_type` refers to the type of research, i.e., whether the paper reports empirical work (where data was collected and / or analyzed), a literature review or software.
 
 ```{r, echo=TRUE}
-dt_empirical_published = data %>%
-  .[paper_type == "empirical" & paper_status == "journal article", ]
-ggplot(dt_empirical_published, aes(x = category, fill = category, color = category)) +
+ggplot(data = data, aes(x = category, fill = category, color = category)) +
   geom_bar(position = "dodge", stat = "count") +
-  geom_text(stat = "count", aes(label = ..count..), vjust = -1) +
+  geom_text(stat = "count", aes(label = ..count..), vjust = 1.5, color = "white") +
+  facet_grid(vars(paper_type), vars(paper_status)) +
   ylab("Number") +
   xlab("Repository content") +
   theme(axis.line = element_line(color = "black")) +
@@ -94,16 +95,41 @@ ggplot(dt_empirical_published, aes(x = category, fill = category, color = catego
   scale_color_viridis(option = "viridis", discrete = TRUE)
 ```
 
-## Repository platform
+## Repositories
+
+The plots in this section include all papers that mention an associated repository (including literature reviews and preprints).
+
+### Content
+
+What's inside the repositories?
+
+Categories are: `code only`, `data only` and `code & data` (code and data are shared in one repository).
+
+```{r, echo=TRUE}
+dt_repo = data %>%
+  .[repo != "n/a", ]
+ggplot(dt_repo, aes(x = category, fill = category, color = category)) +
+  geom_bar(position = "dodge", stat = "count") +
+  geom_text(stat = "count", aes(label = ..count..), vjust = 1.5, color = "white") +
+  ylab("Number") +
+  xlab("Repository content") +
+  theme(axis.line = element_line(color = "black")) +
+  theme(panel.grid.major = element_blank()) +
+  theme(panel.grid.minor = element_blank()) +
+  theme(panel.background = element_blank()) +
+  theme(legend.position = "none") +
+  scale_fill_viridis(option = "viridis", discrete = TRUE) +
+  scale_color_viridis(option = "viridis", discrete = TRUE)
+```
+
+### Platform
 
 Which platforms are used to share code and data?
 
-As above, the plot only includes papers that are (1) empirical (i.e., where empirical data has been collected and / or analyzed) and (2) published in a peer-reviewed journal (i.e., preprints are not included).
-
 ```{r, echo=TRUE}
-ggplot(dt_empirical_published, aes(x = repo_label, fill = repo_label, color = repo_label)) +
+ggplot(dt_repo, aes(x = repo_label, fill = repo_label, color = repo_label)) +
   geom_bar(position = "dodge", stat = "count") +
-  geom_text(stat = "count", aes(label = ..count..), vjust = -1) +
+  geom_text(stat = "count", aes(label = ..count..), vjust = 1.5, color = "white") +
   ylab("Number") +
   xlab("Repository platform") +
   theme(axis.line = element_line(color = "black")) +
@@ -115,16 +141,14 @@ ggplot(dt_empirical_published, aes(x = repo_label, fill = repo_label, color = re
   scale_color_viridis(option = "plasma", discrete = TRUE)
 ```
 
-## Repository license
+### License
 
 Which licenses are used when sharing code and data?
 
-As above, the plot only includes papers that are (1) empirical (i.e., where empirical data has been collected and / or analyzed) and (2) published in a peer-reviewed journal (i.e., preprints are not included).
-
 ```{r, echo=TRUE}
-ggplot(dt_empirical_published, aes(x = repo_license, fill = repo_license, color = repo_license)) +
+ggplot(dt_repo, aes(x = repo_license, fill = repo_license, color = repo_license)) +
   geom_bar(position = "dodge", stat = "count") +
-  geom_text(stat = "count", aes(label = ..count..), vjust = -1) +
+  geom_text(stat = "count", aes(label = ..count..), vjust = 1.5, color = "white") +
   ylab("Number") +
   xlab("License") +
   theme(axis.line = element_line(color = "black")) +
@@ -145,7 +169,7 @@ The plot involves all papers (including review articles and preprints).
 ```{r, echo=TRUE}
 ggplot(data, aes(x = paper_oa, fill = paper_oa, color = paper_oa)) +
   geom_bar(position = "dodge", stat = "count") +
-  geom_text(stat = "count", aes(label = ..count..), vjust = -1) +
+  geom_text(stat = "count", aes(label = ..count..), vjust = 1.5, color = "white") +
   ylab("Number") +
   xlab("Is the paper open access?") +
   theme(axis.line = element_line(color = "black")) +
