@@ -164,6 +164,11 @@ ggplot(dt_repo, aes(x = repo_license, fill = repo_license, color = repo_license)
   scale_color_viridis_d(option = "plasma")
 ```
 
+::: {.callout-tip}
+## Resources 📚
+- [„Licensing“ chapter of the Turing Way](https://the-turing-way.netlify.app/reproducible-research/licensing.html)
+:::
+
 ## Open Access
 
 How many papers are open access?
