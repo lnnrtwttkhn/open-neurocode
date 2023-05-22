@@ -186,3 +186,17 @@ ggplot(data, aes(x = paper_oa, fill = paper_oa, color = paper_oa)) +
   scale_fill_viridis_d(option = "turbo") +
   scale_color_viridis_d(option = "turbo")
 ```
+
+## ODDPub
+
+```{r}
+pdf_folder <- here::here("data", "pdfs_orig")
+pdf_text_folder <- here::here("data", "pdfs_text")
+oddpub::pdf_convert(pdf_folder, pdf_text_folder)
+pdf_text_sentences <- oddpub::pdf_load(paste0(pdf_text_folder, .Platform$file.sep))
+open_data_results <- oddpub::open_data_search(pdf_text_sentences)
+```
+
+## Links
+
+- ["Rules of conduct for good scientific practice" of the Max Planck Society](https://www.mpg.de/197494/rulesScientificPractice.pdf)

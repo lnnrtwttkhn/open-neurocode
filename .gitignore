@@ -6,3 +6,4 @@ _extensions
 *.html
 /.quarto/
 docs
+data/pdf*
